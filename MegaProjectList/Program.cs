@@ -8,11 +8,11 @@ namespace MegaProjectList
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
             const decimal PI = 3.1415926535897932384626m;
-        string input;
+            string input;
             do
             {
                 do
@@ -21,10 +21,10 @@ namespace MegaProjectList
                     input = Console.ReadLine();
 
                 } while (CanConvert(input) == false);
-                var c = Math.Round(PI, Convert.ToInt32(input)> 22 ? 22 : Convert.ToInt32(input));
+                var c = Math.Round(PI, Convert.ToInt32(input) > 22 ? 22 : Convert.ToInt32(input));
                 Console.WriteLine(c);
-            } while (true);
-            
+            } while (input != "q");
+
         }
 
         private static bool CanConvert(string n)
